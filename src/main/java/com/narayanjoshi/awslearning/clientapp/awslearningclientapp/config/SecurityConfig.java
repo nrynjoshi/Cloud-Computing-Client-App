@@ -1,6 +1,6 @@
 package com.narayanjoshi.awslearning.clientapp.awslearningclientapp.config;
 
-import com.narayanjoshi.awslearning.clientapp.awslearningclientapp.services.CustomAuthenticationProvider;
+import com.narayanjoshi.awslearning.clientapp.awslearningclientapp.services.AuthProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,7 +19,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig {
 
     @Autowired
-    private CustomAuthenticationProvider authProvider;
+    private AuthProvider authProvider;
 
     @Bean
     public AuthenticationManager authManager(HttpSecurity http) throws Exception {

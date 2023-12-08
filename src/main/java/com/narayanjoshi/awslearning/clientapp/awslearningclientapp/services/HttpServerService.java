@@ -36,6 +36,16 @@ public class HttpServerService {
         return response;
     }
 
+    public String getProfileViewLink(){
+       try{
+           Map<String, Object> response = httpUtil.get("/user/view/profile-image", true);
+           return (String) response.get("link");
+       }catch (Exception x){
+           x.printStackTrace();
+           return null;
+       }
+    }
+
     public void signup(User userInfo){
         Map map = HttpUtil.getObjectMapper().convertValue(userInfo, Map.class);
         Map<String, Object> response = httpUtil.post("/user/registration", map, false);

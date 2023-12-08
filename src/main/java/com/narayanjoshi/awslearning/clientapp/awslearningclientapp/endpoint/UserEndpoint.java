@@ -52,6 +52,7 @@ public class UserEndpoint {
     public String profilePage(Model model){
         model.addAttribute("userInfo", new User());
         model.addAllAttributes(httpServerService.profile());
+        model.addAttribute("profileImage", httpServerService.getProfileViewLink());
         return "profile";
     }
 

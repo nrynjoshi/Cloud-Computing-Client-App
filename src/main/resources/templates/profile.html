@@ -34,7 +34,7 @@
             <div class="col-md-12">
                 <h2>User Profile</h2>
                 <div class="col-md-6">
-                <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" th:width="200" alt="profile" class="img-thumbnail">
+                <img th:src="${profileImage} ?: 'https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg'" th:width="200" alt="profile" class="img-thumbnail">
                </div>
                    <div class="col-md-6 mt-3">
                        <div>Email: <span th:text="${email}"></span></div>
