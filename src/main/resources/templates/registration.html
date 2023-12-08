@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Portal - Login</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous">
+    <style>
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+</head>
+<body>
+
+<main id="main" class="main">
+    <div class="container">
+
+        <div class="col-md-3 mt-5 center">
+
+            <div class="card">
+                <div class="card-header">
+                    SignUp
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/signup}" method="post" th:object="${user}" >
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" required class="form-control" th:name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" required class="form-control" th:name="password" id="Password" placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" required class="form-control" th:name="name" id="name" placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addressLine1">addressLine1</label>
+                            <input type="text" class="form-control" th:name="addressLine1" id="addressLine1" placeholder="Enter address line 1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">city</label>
+                            <input type="text" class="form-control" th:name="city" id="city" placeholder="Enter your city">
+                        </div>
+                        <div class="form-group">
+                            <label for="postCode">postCode</label>
+                            <input type="text" class="form-control" th:name="postCode" id="postCode" placeholder="Enter your postcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">phoneNumber</label>
+                            <input type="text" class="form-control" th:name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfBirth">dateOfBirth</label>
+                            <input type="date" class="form-control" dataformatas="" th:name="dateOfBirth" id="dateOfBirth" placeholder="Select your date of birth">
+                        </div>
+
+
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                        <div> <a href="/" >Back to login</a></div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</main>
+<!-- End #main -->
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
