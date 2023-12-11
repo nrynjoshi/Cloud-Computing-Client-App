@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "ed3790ce-0c20-41e6-9bc9-0f381960aa5e",
+		"name": "Aws Learning Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1540239"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-AUTH",
+								"value": "narayan",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"username\":\"geevan.josh@gmail.com\",\r\n        \"password\":\"pass1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://narayanjosh.com.np/api/user/login",
+							"protocol": "http",
+							"host": [
+								"narayanjosh",
+								"com",
+								"np"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API_AUTH",
+								"value": "narayan",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"email\": \"geevan.josh2@gmail.com\",\r\n        \"password\": \"pass1\",\r\n        \"name\": \"Narayan Joshi\",\r\n        \"addressLine1\": \"98 Lupton Avenue\",\r\n        \"city\": \"Leeds\",\r\n        \"postCode\": \"LS7 7AE\",\r\n        \"phoneNumber\": \"0776718229999\",\r\n        \"dateOfBirth\": \"1993-10-19\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/user/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"user",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API_AUTH",
+								"value": "narayan",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "1_$2a$10$p1O6jdFbMgnzVa5PxQ9LH.2st7x6A28QAlJ3FZG.qGu5rUZUgE4f6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/geeva/Pictures/1678923165841.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://narayanjosh.com.np/api/user/upload/profile",
+							"protocol": "http",
+							"host": [
+								"narayanjosh",
+								"com",
+								"np"
+							],
+							"path": [
+								"api",
+								"user",
+								"upload",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Display Link",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "API-AUTH",
+								"value": "narayan",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "1-$2a$10$CF6fhe2ML/7WWZVDkBajJO4drt/Qsc9pHgiF/d9UvUw0tsbvFZd.C",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://narayanjosh.com.np/api/user/view/profile-image",
+							"protocol": "http",
+							"host": [
+								"narayanjosh",
+								"com",
+								"np"
+							],
+							"path": [
+								"api",
+								"user",
+								"view",
+								"profile-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "API-AUTH",
+								"value": "narayan",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "1-$2a$10$CF6fhe2ML/7WWZVDkBajJO4drt/Qsc9pHgiF/d9UvUw0tsbvFZd.C",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://narayanjosh.com.np/api/user/profile",
+							"protocol": "http",
+							"host": [
+								"narayanjosh",
+								"com",
+								"np"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
