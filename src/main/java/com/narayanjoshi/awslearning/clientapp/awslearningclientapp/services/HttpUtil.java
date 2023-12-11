@@ -66,7 +66,7 @@ public class HttpUtil {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
             HttpGet httpget = new HttpGet(serverApiEndpoint+url);
 
-            httpget.setHeader("API_AUTH", serverAccessApiAuth);
+            httpget.setHeader("API-AUTH", serverAccessApiAuth);
             httpget.setHeader("Accept", "application/json");
             httpget.setHeader("Content-type", "application/json");
 
@@ -111,7 +111,7 @@ public class HttpUtil {
 
             HttpPost httpPost = new HttpPost(serverApiEndpoint+url);
 
-            httpPost.setHeader("API_AUTH", serverAccessApiAuth);
+            httpPost.setHeader("API-AUTH", serverAccessApiAuth);
             httpPost.setHeader("Accept", "application/json");
             httpPost.setHeader("Content-type", "application/json");
 
@@ -162,7 +162,7 @@ public class HttpUtil {
             MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
             body.add("file", new FileSystemResource(filepath.toFile()));
 
-            headers.set("API_AUTH", serverAccessApiAuth);
+            headers.set("API-AUTH", serverAccessApiAuth);
 
             if(isAuthTokenRequired){
                 headers.set("token", Util.getAuthToken());
